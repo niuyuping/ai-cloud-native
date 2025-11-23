@@ -16,12 +16,11 @@ def export_and_fix_paths(notebook_path, output_dir=None):
         print(f"错误：找不到文件 {notebook_path}")
         return
     
-    # 确定输出目录：默认导出到 notebook 的上一级文件夹
+    # 确定输出目录：默认导出到当前工作目录
     if output_dir:
         output_dir = Path(output_dir).resolve()
     else:
-        # 默认导出到 notebook 的上一级文件夹（例如：Jupyter/xxx.ipynb -> 上一级文件夹）
-        output_dir = notebook.parent.parent.resolve()
+        output_dir = Path.cwd()
     
     output_dir.mkdir(parents=True, exist_ok=True)
     output_file = output_dir / f"{notebook.stem}.html"
@@ -71,7 +70,7 @@ def export_and_fix_paths(notebook_path, output_dir=None):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("用法: python export_notebook.py <notebook_path> [output_dir]")
-        print("      如果不指定 output_dir，将导出到 notebook 的上一级文件夹")
+        print("      如果不指定 output_dir，将导出到当前目录")
         sys.exit(1)
     
     input_notebook_path = sys.argv[1]
@@ -80,9 +79,7 @@ if __name__ == "__main__":
     if input_output_dir:
         print(f"输出目录：{Path(input_output_dir).resolve()}")
     else:
-        input_notebook = Path(input_notebook_path).resolve()
-        default_output = input_notebook.parent.parent
-        print(f"输出目录（默认）：{default_output}")
+        print(f"输出目录（默认）：{Path.cwd()}")
     
     export_and_fix_paths(input_notebook_path, input_output_dir)
 

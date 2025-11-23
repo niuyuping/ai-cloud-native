@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>使用AI快速制作原型</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>构建前后端分离的SPA应用</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7511,17 +7511,17 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e47675af">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ececee55">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="%E4%BD%BF%E7%94%A8AI%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9C%E5%8E%9F%E5%9E%8B">使用AI快速制作原型<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8AI%E5%BF%AB%E9%80%9F%E5%88%B6%E4%BD%9C%E5%8E%9F%E5%9E%8B">¶</a></h1>
+<h1 id="%E6%9E%84%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84SPA%E5%BA%94%E7%94%A8">构建前后端分离的SPA应用<a class="anchor-link" href="#%E6%9E%84%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E7%9A%84SPA%E5%BA%94%E7%94%A8">¶</a></h1>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25e18766">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bc188d21">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7529,188 +7529,244 @@ a.anchor-link {
 <div style="border-left: 5px solid #007bff; padding-left: 15px;">
 <h2 id="%E7%9B%AE%E6%A0%87">目标<a class="anchor-link" href="#%E7%9B%AE%E6%A0%87">¶</a></h2></div>
 <ul>
-<li>使用Google AI Studio开发『社会保险金计算器』原型，并部署到Cloud Run的无服务器（Serverless）环境中。</li>
+<li>将上节课完成的原型进行前后端分离，将保险、税率相关的敏感数据和算法分离到后端服务中，前端服务仅专注于交互功能的实现。</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fd8c1374">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=833502b4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="border-left: 5px solid #007bff; padding-left: 15px;">
+<h2 id="%E6%8A%80%E6%9C%AF%E6%A0%88">技术栈<a class="anchor-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88">¶</a></h2></div>
+<ul>
+<li><h4 id="%E5%89%8D%E7%AB%AF">前端<a class="anchor-link" href="#%E5%89%8D%E7%AB%AF">¶</a></h4><ul>
+<li><p>TypeScript - <a href="https://www.typescriptlang.org">https://www.typescriptlang.org</a></p>
+</li>
+<li><p>React - <a href="https://ja.react.dev/">https://ja.react.dev/</a></p>
+</li>
+<li><p>Axios - <a href="https://axios-http.com/">https://axios-http.com/</a></p>
+</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
+</li>
+<li><h4 id="%E5%90%8E%E7%AB%AF">后端<a class="anchor-link" href="#%E5%90%8E%E7%AB%AF">¶</a></h4><ul>
+<li><p>Spring WebFlux - <a href="https://docs.spring.io/spring-framework/reference/web/webflux.html">https://docs.spring.io/spring-framework/reference/web/webflux.html</a></p>
+</li>
+<li><p>Spring Boot Flyway - <a href="https://docs.spring.io/spring-boot/api/rest/actuator/flyway.html">https://docs.spring.io/spring-boot/api/rest/actuator/flyway.html</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8578faf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div style="border-left: 5px solid #007bff; padding-left: 15px;">
 <h2 id="%E6%9E%B6%E6%9E%84%E5%9B%BE">架构图<a class="anchor-link" href="#%E6%9E%B6%E6%9E%84%E5%9B%BE">¶</a></h2></div>
-<img alt="Social Insurance Query System" src="./Assets/Social Insurance Query System 1.png" style="max-width: 100%; margin-left: 25px"/>
+<img alt="Social Insurance Query System" src="./Assets/Social Insurance Query System 2.svg" style="max-width: 100%; margin-left: 25px; padding: 50px; background-color: white"/>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0e9fb467">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cca75616">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E5%AF%BC%E8%88%AA%E5%88%B0Google-AI-Studio%E7%9A%84App%E5%88%B6%E4%BD%9C%E9%A1%B5%E9%9D%A2">导航到Google AI Studio的App制作页面<a class="anchor-link" href="#%E5%AF%BC%E8%88%AA%E5%88%B0Google-AI-Studio%E7%9A%84App%E5%88%B6%E4%BD%9C%E9%A1%B5%E9%9D%A2">¶</a></h2></div>
+<h2 id="%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">搭建本地开发环境<a class="anchor-link" href="#%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">¶</a></h2></div>
 <ul>
-<li><a href="https://aistudio.google.com/apps">https://aistudio.google.com/apps</a></li>
+<li><h4 id="%E5%9C%A8Docker-Desktop%E4%B8%AD%E5%88%9B%E5%BB%BAPostgreSQL%E5%AE%B9%E5%99%A8">在Docker Desktop中创建PostgreSQL容器<a class="anchor-link" href="#%E5%9C%A8Docker-Desktop%E4%B8%AD%E5%88%9B%E5%BB%BAPostgreSQL%E5%AE%B9%E5%99%A8">¶</a></h4><ul>
+<li><p>① 下载并安装Docker Desktop -<a href="https://www.docker.com">https://www.docker.com</a></p>
+</li>
+<li><p>② 运行<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">终端</span>应用程序（Windows 10中运行<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">超级终端</span>应用程序）</p>
+</li>
+<li><p>③ 在终端里输入并按下回车:</p>
+<ul>
+<li><em><span style="color: orange">
+docker run --name kanagawa-insurance-postgres -e POSTGRES_USER=db_user -e POSTGRES_PASSWORD=local -e POSTGRES_DB=social_insurance -d -p 5432:5432 postgres:17.4
+</span></em></li>
+</ul>
+</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
+</li>
+<li><h4 id="%E9%AA%8C%E8%AF%81%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%BA%93">验证本地数据库<a class="anchor-link" href="#%E9%AA%8C%E8%AF%81%E6%9C%AC%E5%9C%B0%E6%95%B0%E6%8D%AE%E5%BA%93">¶</a></h4><ul>
+<li><p>① 在终端里输入并按下回车：</p>
+<ul>
+<li><em><span style="color: orange">
+psql -h localhost -p 5432 -U db_user -d social_insurance
+</span></em></li>
+</ul>
+<div style="margin-bottom: 1rem; margin-left: 1rem; padding-top: 1rem">
+<p>※ 挑战：<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">psql</span>是一个独立的命令行工具，如果你的系统中还没有安装它，请搜索相关资料并完成安装。</p>
+</div>
+</li>
+<li><p>② 终端窗口里会显示：</p>
+<div style="padding: 1rem; background-color: #d3e3fd; color: black; width: 40rem; margin-bottom: 1rem; border-radius: 0.25rem; margin-left: 1rem; ">
+      Password for user db_user:  
+  </div>
+</li>
+<li><p>③ 输入密码 <em><span style="color: orange">local</span></em>，然后按下回车。</p>
+</li>
+<li><p>④ 如果连接成功，你将看到psql的提示符，证明数据库已成功创建并可访问：
+<div style="padding: 1rem; background-color: #d3e3fd; color: black; width: 40rem; margin-bottom: 10px; border-radius: 5px; margin-left: 1rem;">
+<div>psql (版本信息)</div>
+<div>Type "help" for help.</div>
+<div style="margin-top: 1rem">social_insurance=#</div>
+</div></p>
+</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
+</li>
+<li><h4 id="%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">搭建开发环境<a class="anchor-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">¶</a></h4><ul>
+<li><p>① 下载并安装Cursor - <a href="https://www.cursor.com">https://www.cursor.com</a>，这是我们在本课程中主要使用的集成开发环境。</p>
+</li>
+<li><p>② 在Cursor中安装<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">Extension Pack For Java</span>插件</p>
+</li>
+<li><p>③ 在Cursor中安装<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">Spring Boot Extension Pack</span>插件</p>
+</li>
+<li><p>④ 在Cursor中安装<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">TypeScript</span>插件</p>
+</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
+</li>
+<li><h4 id="%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86">扩展知识<a class="anchor-link" href="#%E6%89%A9%E5%B1%95%E7%9F%A5%E8%AF%86">¶</a></h4><ul>
+<li><p>我们默认使用操作系统自带的终端应用进行命令行操作，但你也可以使用其它命令行工具，如<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">Bash</span>或<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">Zsh</span>，它们提供了一些增强特性。如果你有兴趣，可以尝试在系统中安装并使用它们。</p>
+</li>
+<li><p>在本课程中，我们使用Cursor做为基础教学工具，它的AI智能体（AI Agents）使我们的课程得以更高效的进行，可以令学习者更快速的掌握架构和全栈开发知识。Cursor是收费工具，目前的定价是20美元/月。</p>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=521dfaaa">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b35223bb">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E6%B7%BB%E5%8A%A0%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6">添加原始数据文件<a class="anchor-link" href="#%E6%B7%BB%E5%8A%A0%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6">¶</a></h2></div>
+<h2 id="%E5%BC%80%E5%8F%91%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1">开发后端服务<a class="anchor-link" href="#%E5%BC%80%E5%8F%91%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1">¶</a></h2></div>
 <ul>
-<li>将 <a href="../References/令和７（2025）年度 Kanagawa保险料额表.pdf" target="_blank">令和７（2025）年度 Kanagawa保险料额表.pdf</a> 拖入聊天对话框中。</li>
+<li><h4 id="%E5%88%9B%E5%BB%BASocial-Insurance%E9%A1%B9%E7%9B%AE">创建Social Insurance项目<a class="anchor-link" href="#%E5%88%9B%E5%BB%BASocial-Insurance%E9%A1%B9%E7%9B%AE">¶</a></h4><ul>
+<li><p>① 在Cursor首页按下<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">Shift + Command + P</span>(MacOS)或<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">Shift + Ctrl + P </span>(Windows)</p>
+</li>
+<li><p>② 输入 <em><span style="color: orange">Spring Initializr: Create a Gradle Project</span></em></p>
+</li>
+<li><p>③ 依次设置种参数：</p>
+<ul>
+<li><p>所属域：<em><span style="color: orange">jp.asatex.niuyuping</span></em></p>
+</li>
+<li><p>包名：<em><span style="color: orange">social-insurance</span></em></p>
+</li>
+<li><p>包类型：<em><span style="color: orange">Jar</span></em></p>
+</li>
+<li><p>SDK版本: <em><span style="color: orange">21</span></em></p>
+</li>
+<li><p>初始依赖：<em><span style="color: orange">Spring Reactive Web</span></em></p>
+</li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=aba7e7b9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E8%BE%93%E5%85%A5%E6%8F%90%E7%A4%BA%E8%AF%8D">输入提示词<a class="anchor-link" href="#%E8%BE%93%E5%85%A5%E6%8F%90%E7%A4%BA%E8%AF%8D">¶</a></h2></div>
-<span style="color: orange">
-<ul>
-<li><em>这是2025年日本神奈川县的社会保险金额表格，请编写一个应用，可以输入“工资金额”，点击“计算”按钮后，输出我的社会保险金明细，以及我最终可以得到的实发工资。</em></li>
-</ul>
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=89411367">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E9%80%9A%E8%BF%87%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8E%A7%E5%88%B6AI%E8%A1%8C%E4%B8%BA">通过提示词控制AI行为<a class="anchor-link" href="#%E9%80%9A%E8%BF%87%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8E%A7%E5%88%B6AI%E8%A1%8C%E4%B8%BA">¶</a></h2></div>
-<span style="color: orange">
-<ul>
-<li><em>这是2025年日本神奈川县的社会保险金额表格，请帮我分析这个表格中各项保险的算法，要考虑表格及其说明文字提及的各种特殊情况、计算的边界，不仅要告诉我各种保险的计算公式，还有会影响到计算结果的各种因素。请注意，仅分析，在我确认之前，不要开始编写代码。</em></li>
-</ul>
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=64e46c57">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E5%90%91AI%E6%8F%8F%E8%BF%B0%E6%8A%80%E6%9C%AF%E6%A0%88">向AI描述技术栈<a class="anchor-link" href="#%E5%90%91AI%E6%8F%8F%E8%BF%B0%E6%8A%80%E6%9C%AF%E6%A0%88">¶</a></h2></div>
-<span style="color: orange">
-<ul>
-<li><p><em>请按以下要求进行重构：</em></p>
-<ul>
-<li><p><em>使用React构建主要的前端框架。</em></p>
-</li>
-<li><p><em>使用Redux管理状态。</em></p>
-</li>
-<li><p><em>使用Next.js以提供更好的用户体验和性能。</em></p>
-</li>
-<li><p><em>使用Tailwind CSS实现视觉效果。</em></p>
-</li>
-<li><p><em>使用微软的Fluent交互风格（或谷歌的Material交互风格）。</em></p>
+<div style="margin-bottom: 1rem"></div>
 </li>
 </ul>
 </li>
+<li><h4 id="%E5%88%9B%E5%BB%BAFlyway%E8%BF%81%E7%A7%BB%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6">创建Flyway迁移脚本文件<a class="anchor-link" href="#%E5%88%9B%E5%BB%BAFlyway%E8%BF%81%E7%A7%BB%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6">¶</a></h4><ul>
+<li>将数据库脚本文件 <a href="../References/V1__init_premium_bracket_table.sql" target="_blank">V1__init_premium_bracket_table.sql</a> 复制到目录 <span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">{root}/src/main/resources/db/migration</span> 下。</li>
 </ul>
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fb17346e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E5%8F%91%E5%B8%83">发布<a class="anchor-link" href="#%E5%8F%91%E5%B8%83">¶</a></h2></div>
-<div style="text-align: left;">
-<ul>
-<li>通过页面右上的 <img alt="No description has been provided for this image" src="./Assets/github_button.png" style="height: 25px; vertical-align: middle;"/> 图标将代码上传到Github。 </li>
-</ul>
-</div>
-<div style="text-align: left;">
-<ul>
-<li>通过页面右上的 <img alt="No description has been provided for this image" src="./Assets/deploy_button.png" style="height: 25px; vertical-align: middle;"/> 图标发布原型到Cloud Run。</li>
-</ul>
-</div>
-<ul>
-<li>通过自动生成的 URL 预览原型。</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5f124594">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98(CD)">持续交付(CD)<a class="anchor-link" href="#%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98(CD)">¶</a></h2></div>
-<ul>
-<li>输入更多提示词，如“<span style="color: orange">将语言更换为英文（或中文）</span>”，然后再次发布，体验Google Cloud生态中的持续交付。</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=506c31ed">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E4%BD%9C%E4%B8%9A">作业<a class="anchor-link" href="#%E4%BD%9C%E4%B8%9A">¶</a></h2></div>
-<ul>
-<li><p>按照本节所学的知识开发一个计算社会保险金的原型产品。</p>
+<div style="margin-bottom: 1rem"></div>
 </li>
-<li><p>向原型产品添加雇用保险数据。</p>
+<li><h4 id="%E5%88%9B%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">创建开发环境配置文件<a class="anchor-link" href="#%E5%88%9B%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">¶</a></h4><ul>
+<li>将配置文件 <a href="../References/application-dev.properties" target="_blank">application-dev.properties</a> 复制到目录 <span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">{root}/src/main/resources</span> 下。</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
 </li>
-<li><p>向原型产品添加源泉徴収税数据。</p>
+<li><h4 id="%E5%88%9B%E5%BB%BA%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82%EF%BC%88Infrastructure%EF%BC%89">创建基础设施层（Infrastructure）<a class="anchor-link" href="#%E5%88%9B%E5%BB%BA%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82%EF%BC%88Infrastructure%EF%BC%89">¶</a></h4><ul>
+<li><p>在Cursor的Chat(Agent模式)中输入: <em><span style="color: orange">请根据我的Flyway迁移脚本V1__init_premium_bracket_table.sql为我创建对应的实体</span></em></p>
+</li>
+<li><p>在Cursor的Chat(Agent模式)中输入: <em><span style="color: orange">请根据我的实体为我创建Repository的接口和实现</span></em></p>
+</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
+</li>
+<li><h4 id="%E5%88%9B%E5%BB%BA%E9%A2%86%E5%9F%9F%E5%B1%82%EF%BC%88Domain%EF%BC%89">创建领域层（Domain）<a class="anchor-link" href="#%E5%88%9B%E5%BB%BA%E9%A2%86%E5%9F%9F%E5%B1%82%EF%BC%88Domain%EF%BC%89">¶</a></h4><ul>
+<li><p>在Cursor的Chat(Agent模式)中输入:</p>
+<ul>
+<li><span style="color: orange">
+<p><em>请为我创建Domain层，除基本的CRUD方法外，还需要一个查询社会保险金额的方法（方法名为：socialInsuranceQuery），输入月薪（参数名：monthlySalary）和年龄（参数名：age），输出一个DTO（类名：SocialInsuranceDomainDto），DTO中包含无介护健康保险金额（字段名：healthCostWithNoCare）、介护保险金额（字段名：careCost）、厚生年金金额（字段名：pension），共三个字段。如果年龄小于40岁则介护保险金额为0，如果大于等于40岁，介护保险金额 = 有介护健康保险金额 - 无介护健康保险金额。</em></p>
+</span></li>
+</ul>
+
+</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
+</li>
+<li><h4 id="%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%E5%B1%82%EF%BC%88Application%EF%BC%89">创建应用层（Application）<a class="anchor-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%E5%B1%82%EF%BC%88Application%EF%BC%89">¶</a></h4><ul>
+<li><p>在Cursor的Chat(Agent模式)中输入:</p>
+<ul>
+<li><span style="color: orange">
+<p><em>请为我创建Application层，不需要CRUD方法，只需要一个查询社会保险金额的方法（方法名为：socialInsuranceQuery），输入月薪（参数名：monthlySalary）和年龄（参数名：age），输出一个DTO（类名：SocialInsuranceApplicationDto），DTO中包含无介护健康保险金额（字段名：healthCostWithNoCare）、介护保险金额（字段名：careCost）、厚生年金金额（字段名：pension），共三个字段。调用Domain层的同名方法来获取数据。</em></p>
+</span></li>
+</ul>
+
+<div style="margin-bottom: 1rem"></div>
+</li>
+</ul>
+</li>
+<li><h4 id="%E5%88%9B%E5%BB%BA%E6%8E%A7%E5%88%B6%E5%99%A8%E5%B1%82%EF%BC%88Controller%EF%BC%89">创建控制器层（Controller）<a class="anchor-link" href="#%E5%88%9B%E5%BB%BA%E6%8E%A7%E5%88%B6%E5%99%A8%E5%B1%82%EF%BC%88Controller%EF%BC%89">¶</a></h4><ul>
+<li><p>在Cursor的Chat(Agent模式)中输入:</p>
+<ul>
+<li><span style="color: orange">
+<p><em>请为我创建Controller层，root端点为“/”，不需要CRUD方法，只暴露一个查询社会保险金额的get端点（端点路由:“/socialInsuranceQuery”），映射到与端点同名的方法上（方法名为：socialInsuranceQuery），输入月薪（参数名：monthlySalary）和年龄（参数名：age），输出一个DTO（类名：SocialInsuranceDto），DTO中包含无介护健康保险金额（字段名：healthCostWithNoCare）、介护保险金额（字段名：careCost）、厚生年金金额（字段名：pension），共三个字段。调用Application层的同名方法来获取数据。</em></p>
+</span></li>
+</ul>
+
+</li>
+</ul>
+</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
+<ul>
+<li><h4 id="%E5%9C%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1">在开发环境下运行服务<a class="anchor-link" href="#%E5%9C%A8%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8B%E8%BF%90%E8%A1%8C%E6%9C%8D%E5%8A%A1">¶</a></h4><ul>
+<li><p>在Cursor的<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">终端</span>窗口里输入并按下回车:</p>
+<ul>
+<li><em><span style="color: orange">
+./gradlew bootRun --args='--spring.profiles.active=dev'
+</span></em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="margin-bottom: 1rem"></div>
+<ul>
+<li><h4 id="%E4%BD%BF%E7%94%A8Httpie%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95">使用Httpie进行测试<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8Httpie%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95">¶</a></h4><ul>
+<li><p>在Cursor的<span style="margin: 0 0.1rem; padding: 0.1rem 0.2rem; background-color: #d3e3fd; color: black;border-radius: 0.25rem;">终端</span>窗口里输入并按下回车:</p>
+<ul>
+<li><em><span style="color: orange">
+http :9002/socialInsuranceQuery monthSalary==300000 age==45
+</span></em></li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7c4e625f">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E4%BD%9C%E4%B8%9A%E4%BA%A4%E4%BB%98%E6%96%B9%E5%BC%8F">作业交付方式<a class="anchor-link" href="#%E4%BD%9C%E4%B8%9A%E4%BA%A4%E4%BB%98%E6%96%B9%E5%BC%8F">¶</a></h2></div>
-<ul>
-<li><p>原型预览URL</p>
-</li>
-<li><p>Github代码库URL</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=00765f28">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=153c0797">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7718,30 +7774,32 @@ a.anchor-link {
 <div style="border-left: 5px solid #007bff; padding-left: 15px;">
 <h2 id="%E5%B7%A5%E5%85%B7%E6%B8%85%E5%8D%95">工具清单<a class="anchor-link" href="#%E5%B7%A5%E5%85%B7%E6%B8%85%E5%8D%95">¶</a></h2></div>
 <ul>
-<li><p>Google AI Studio - <a href="https://aistudio.google.com">https://aistudio.google.com</a></p>
+<li><p>Cursor - <a href="https://cursor.com/">https://www.cursor.com</a></p>
 </li>
-<li><p>Google Cloud - <a href="https://cloud.google.com">https://cloud.google.com</a></p>
+<li><p>Docker Desktop - <a href="https://www.docker.com">https://www.docker.com</a></p>
 </li>
-<li><p>Github - <a href="https://www.github.com">https://www.github.com</a></p>
+<li><p>Httpie - <a href="https://www.httpie.io">https://www.httpie.io</a></p>
+</li>
+<li><p>Npm - <a href="https://www.npmjs.com">https://www.npmjs.com</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fb71125a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=01397983">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <div style="border-left: 5px solid #007bff; padding-left: 15px;">
-<h2 id="%E6%9D%90%E6%96%99%E6%B8%85%E5%8D%95">材料清单<a class="anchor-link" href="#%E6%9D%90%E6%96%99%E6%B8%85%E5%8D%95">¶</a></h2></div>
+<h2 id="%E6%8F%92%E4%BB%B6%E6%B8%85%E5%8D%95(Cursor)">插件清单(Cursor)<a class="anchor-link" href="#%E6%8F%92%E4%BB%B6%E6%B8%85%E5%8D%95(Cursor)">¶</a></h2></div>
 <ul>
-<li><p><a href="../References/令和７（2025）年度 Kanagawa保险料额表.pdf" target="_blank">令和７（2025）年度 Kanagawa保险料额表.pdf</a></p>
+<li><p>Extension Pack for Java - <a href="https://open-vsx.org/extension/vscjava/vscode-java-pack">https://open-vsx.org/extension/vscjava/vscode-java-pack</a></p>
 </li>
-<li><p><a href="../References/令和７（2025）年度 源泉徴収税額表.pdf" target="_blank">令和７（2025）年度 源泉徴収税額表.pdf</a></p>
+<li><p>Spring Boot Extension Pack - <a href="https://open-vsx.org/extension/VMware/vscode-boot-dev-pack">https://open-vsx.org/extension/VMware/vscode-boot-dev-pack</a></p>
 </li>
-<li><p><a href="../References/令和７（2025）年度 雇用保険料率のご案内.pdf" target="_blank">令和７（2025）年度 雇用保険料率のご案内.pdf</a></p>
+<li><p>TypeScript (Native Preview) - <a href="https://github.com/microsoft/typescript-go">https://github.com/microsoft/typescript-go</a></p>
 </li>
 </ul>
 </div>
