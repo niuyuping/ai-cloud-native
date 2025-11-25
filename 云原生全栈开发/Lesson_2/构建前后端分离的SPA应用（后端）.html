@@ -7521,6 +7521,20 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c1b5cfbe">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div style="border-left: 5px solid #007bff; padding-left: 15px;">
+<h2 id="%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80">演示地址<a class="anchor-link" href="#%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80">¶</a></h2></div>
+<ul>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bc188d21">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7762,7 +7776,7 @@ psql -h localhost -p 5432 -U db_user -d social_insurance
 </ul>
 <div style="margin-bottom: 1rem"></div>
 </li>
-<li><h4 id="%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E6%9E%B6%E6%9E%84%E5%9B%BE">领域驱动设计架构图<a class="anchor-link" href="#%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E6%9E%B6%E6%9E%84%E5%9B%BE">¶</a></h4> <img alt="Social Insurance Query System" src="./Assets/ddd.jpg" style="max-width: 80%; margin-left: 25px; padding: 50px; background-color: white"/>
+<li><h4 id="%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E6%9E%B6%E6%9E%84%E5%9B%BE">领域驱动设计架构图<a class="anchor-link" href="#%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1%E6%9E%B6%E6%9E%84%E5%9B%BE">¶</a></h4> <img alt="Social Insurance Query System" src="./Assets/ddd_model.jpg" style="max-width: 80%; margin-left: 25px; padding: 50px; background-color: white"/>
 <div style="margin-bottom: 1rem"></div>
 </li>
 <li><h4 id="%E5%88%9B%E5%BB%BA%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82%EF%BC%88Infrastructure%EF%BC%89">创建基础设施层（Infrastructure）<a class="anchor-link" href="#%E5%88%9B%E5%BB%BA%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%B1%82%EF%BC%88Infrastructure%EF%BC%89">¶</a></h4><ul>
@@ -7895,7 +7909,7 @@ http :9002/socialInsuranceQuery monthSalary==300000 age==45
 <li><p>在Cursor的Chat(Agent模式)中输入:</p>
 <ul>
 <li><span style="color: orange">
-<p><em>健康保险、介护保险、厚生年金的花费由雇员（employee）和雇主（employer）双方各承担50%，请修改SocialInsuranceDomainDto的定义，包含employeeCost和employerCost两个结构体，每结构体都包含healthCostWithNoCard、careCost、pension三个字段，分别保存雇员和雇主所承担的各项费用金额。请注意，仅修改领域层相关的数据结构和算法，不要修改其它代码。我使用了WebFlux架构，请采用流式编程风格。</em></p>
+<p><em>健康保险、介护保险、厚生年金的花费由雇员（employee）和雇主（employer）双方各承担50%，请修改SocialInsuranceDomainDto的定义，包含employeeCost和employerCost两个结构体，每结构体都包含healthCostWithNoCare、careCost、pension三个字段，分别保存雇员和雇主所承担的各项费用金额。请注意，仅修改领域层相关的数据结构和算法，不要修改其它代码。我使用了WebFlux架构，请采用流式编程风格。</em></p>
 </span></li>
 </ul>
 
@@ -7907,7 +7921,7 @@ http :9002/socialInsuranceQuery monthSalary==300000 age==45
 <li><p>在Cursor的Chat(Agent模式)中输入:</p>
 <ul>
 <li><span style="color: orange">
-<p><em>请修改SocialInsuranceApplicationDto的定义，包含employeeCost和employerCost两个结构体，每结构体都包含healthCostWithNoCard、careCost、pension三个字段，分别保存雇员和雇主所承担的各项费用金额。请注意，仅修改应用层相关的数据结构和算法，不要修改其它代码。我使用了WebFlux架构，请采用流式编程风格。</em></p>
+<p><em>请修改SocialInsuranceApplicationDto的定义，包含employeeCost和employerCost两个结构体，每结构体都包含healthCostWithNoCare、careCost、pension三个字段，分别保存雇员和雇主所承担的各项费用金额。请注意，仅修改应用层相关的数据结构和算法，不要修改其它代码。我使用了WebFlux架构，请采用流式编程风格。</em></p>
 </span></li>
 </ul>
 
@@ -7919,10 +7933,25 @@ http :9002/socialInsuranceQuery monthSalary==300000 age==45
 <li><p>在Cursor的Chat(Agent模式)中输入:</p>
 <ul>
 <li><span style="color: orange">
-<p><em>请修改SocialInsuranceDto的定义，包含employeeCost和employerCost两个结构体，每结构体都包含healthCostWithNoCard、careCost、pension三个字段，分别保存雇员和雇主所承担的各项费用金额。请注意，仅修改控制层相关的数据结构和算法，不要修改其它代码。我使用了WebFlux架构，请采用流式编程风格。</em></p>
-</span></li>
+<p><em>请修改SocialInsuranceDto的定义，包含employeeCost和employerCost两个结构体，每结构体都包含healthCostWithNoCare、careCost、pension三个字段，分别保存雇员和雇主所承担的各项费用金额。请注意，仅修改控制层相关的数据结构和算法，不要修改其它代码。我使用了WebFlux架构，请采用流式编程风格。</em></p>
+<p><em>端点返回的JSON结构应如下所示：</em></p>
+<pre style="color: orange; font-style: italic;">
+{  
+  employeeCost: {  
+    healthCostWithNoCare: 30000,  
+    careCost: 15000,  
+    pension: 50000  
+  },  
+  employerCost: {  
+    healthCostWithNoCare: 30000,  
+    careCost: 15000,  
+    pension: 50000  
+  }  
+}
+</pre>
+</span>
+</li>
 </ul>
-
 </li>
 </ul>
 </li>
